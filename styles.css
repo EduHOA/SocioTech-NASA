@@ -1,0 +1,235 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Inter;
+}
+
+.bghome {
+    background-image: url('./img/fundo-home.png'); /* Substitua pelo caminho correto da sua imagem de fundo */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.logo-container {
+    margin-bottom: 50px;
+    position: absolute;
+    top: 10%; /* Ajuste a posição vertical */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo-container img {
+    width: 200px; /* Tamanho ajustável da imagem circular do logo */
+    border-radius: 50%; /* Mantém a forma circular da imagem */
+}
+
+.btn-play {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn-play button {
+    background-color: #100C39; /* Cor do botão (azul escuro) */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.btn-play button:hover {
+    background-color: #000080; /* Efeito hover no botão */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('./img/fundo-home.png'); /* Substitua pelo caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.menu {
+    display: flex;
+    padding: 178px;
+    gap: 30px;
+}
+
+.menu-item {
+    background-color: #100C39;
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 300px;
+    height: 198px;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+}
+
+.menu-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+
+.treino {
+    display: flex;
+    padding: 178px;
+    gap: 30px;
+}
+
+.treino-item {
+    background-color: #100C39;
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 300px;
+    height: 230px;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.treino-item1 {
+    background-color: #100C39;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: 3px #00B630 solid;
+    width: 300px;
+    height: 230px;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.treino-item:hover, .treino-item1:hover {
+    transform: scale(1.1);
+}
+
+.treino-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.treino-item h3, .treino-item1 h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('space-background.jpg'); /* Substitua pelo caminho da imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    width: 300px;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons {
+    padding: 178px;
+    gap: 30px;
+}
+
+/* Botão verde */
+.btn-green {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #218838;
+}
+
+/* Botão azul escuro */
+.btn-blue {
+    background-color: #002366;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #001a4d;
+}
+
+.buttons-desafio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-info {
+    border-radius: 10px;
+    width: 400px;
+    height: 50px;
+}
+
+.button-nivel {
+    display: flex;
+    flex-direction: row;
+    padding: 50px;
+    gap: 20px;
+}
+
+.btn {
+    border-radius: 4px;
+    width: 150px;
+    height: 35px;
+}
+
+.btn-initial {
+    border-radius: 8px;
+}
