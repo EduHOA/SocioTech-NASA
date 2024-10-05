@@ -34,8 +34,8 @@ def detectar_colisao(x, y, w, h, alvo_x, alvo_y, alvo_tamanho):
             y < alvo_y + alvo_tamanho and y + h > alvo_y)
 
 # Caminhos das imagens
-caminho_imagem_balao = 'C:/Users/Edu/Desktop/projeto-nasa/SocioTech-NASA/img/balao.png'
-caminho_imagem_estouro = 'C:/Users/Edu/Desktop/projeto-nasa/SocioTech-NASA/img/estouro.png'
+caminho_imagem_balao = './img/balao.png'
+caminho_imagem_estouro = './img/estouro.png'
 
 def gen_frames():
     cap = cv2.VideoCapture(0)
