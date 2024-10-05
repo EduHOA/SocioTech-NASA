@@ -29,18 +29,18 @@ body, html {
 
 .btn-play {
     position: absolute;
-    bottom: 10%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
 }
 
 .btn-play button {
-    background-color: #191970; /* Cor do botão (azul escuro) */
+    background-color: #100C39; /* Cor do botão (azul escuro) */
     color: white;
     border: none;
     padding: 15px 30px;
     font-size: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
 }
 
 .btn-play button:hover {
