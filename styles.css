@@ -178,6 +178,11 @@ button {
     transition: background-color 0.3s ease;
 }
 
+.buttons {
+    padding: 178px;
+    gap: 30px;
+}
+
 /* Botão verde */
 .btn-green {
     background-color: #28a745;
