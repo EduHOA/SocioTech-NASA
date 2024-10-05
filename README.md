@@ -1,6 +1,6 @@
-# SocioTech-NASA
+# SocioTech by Microgravity Motion
 
-#Problemas
+# Problemas
 
 Por que a NASA Estuda a Microgravidade?
 A NASA estuda a microgravidade para entender como ela afeta as pessoas e outras coisas. Por exemplo, a microgravidade pode enfraquecer músculos e ossos, e é importante que os astronautas permaneçam saudáveis em viagens espaciais longas, como uma viagem a Marte. A microgravidade também afeta o fogo, que queima em forma mais redonda, e os cristais, que crescem de forma mais perfeita.
@@ -25,3 +25,20 @@ Os estudos abordam seis principais temas:
 5. **Sensorimotor**: Astronautas enfrentam desorientação e tontura ao se adaptar a diferentes gravidades. O estudo explora como a gravidade afeta o equilíbrio e a capacidade motora após longas missões.
 
 6. **Visão**: As mudanças na gravidade afetam os olhos e o cérebro, impactando a visão. Cientistas buscam entender como essas mudanças ocorrem ao longo de diferentes durações de missão.
+
+
+# Solução
+
+Um jogo inovador projetado para astronautas que vivem a experiência única da microgravidade. Os jogadores enfrentarão desafios emocionantes e divertidos, enquanto realizam uma série de movimentos, exercícios, danças e jogos. 
+Neste jogo, o astronauta terá a oportunidade de aprimorar sua saúde física e mental, competindo com seus colegas astronautas em um ambiente virtual. 
+À medida que você completa cada movimento corretamente, sua pontuação aumenta, incentivando uma experiência de aprendizado e adaptação contínua.
+
+# Grupo
+nome: Eduardo Aguiar
+nome: Matheus Inacio
+nome: Isaac Arantes
+nome: Nathan Schiavon 
+nome: Matheus Souza
+nome: Enzo dos Santos
+
+https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/
