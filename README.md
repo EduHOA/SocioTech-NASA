@@ -42,3 +42,9 @@ nome: Matheus Souza
 nome: Enzo dos Santos
 
 https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/
+
+# Para Execução
+
+pip install flask
+pip install numpy
+pip install opencv-python
