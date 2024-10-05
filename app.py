@@ -44,8 +44,6 @@ def gen_frames():
     # Intervalos de cor para detecção
     lower_blue = np.array([100, 150, 0])
     upper_blue = np.array([140, 255, 255])
-    lower_green = np.array([40, 40, 40])
-    upper_green = np.array([70, 255, 255])
 
     score = 0
     imagem_alvo = cv2.imread(caminho_imagem_balao, cv2.IMREAD_UNCHANGED)
@@ -62,6 +60,7 @@ def gen_frames():
     intervalo_mudanca = 7
     tempo_estouro = 0
     posicao_estouro = None
+    fade_out_duracao = 0.5  # Duração do fade out em segundos
 
     while True:
         try:
@@ -74,19 +73,18 @@ def gen_frames():
 
             # Detecta as cores
             mask_azul = detectar_cor(frame, lower_blue, upper_blue)
-            mask_verde = detectar_cor(frame, lower_green, upper_green)
 
             colisao_ocorreu = False
 
-            # Processa contornos das máscaras
-            for contour, color in zip([mask_azul, mask_verde], [(255, 255, 255), (255, 255, 255)]):
-                contours, _ = cv2.findContours(contour, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-                for cnt in contours:
-                    if cv2.contourArea(cnt) > 500:
-                        x, y, w, h = cv2.boundingRect(cnt)
-                        if detectar_colisao(x, y, w, h, alvo_posicao[0], alvo_posicao[1], alvo_tamanho):
-                            colisao_ocorreu = True
-                        cv2.rectangle(frame, (x, y), (x + w, y + h), color, 1)
+            # Processa contornos da máscara azul
+            contours, _ = cv2.findContours(mask_azul, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+            for cnt in contours:
+                if cv2.contourArea(cnt) > 500:
+                    x, y, w, h = cv2.boundingRect(cnt)
+                    if detectar_colisao(x, y, w, h, alvo_posicao[0], alvo_posicao[1], alvo_tamanho):
+                        colisao_ocorreu = True
+                    # Desenha o retângulo verde em vez de branco
+                    cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 1)
 
             if colisao_ocorreu:
                 score += 1
@@ -113,15 +111,20 @@ def gen_frames():
                 frame[alvo_posicao[1]:alvo_posicao[1] + alvo_tamanho, alvo_posicao[0]:alvo_posicao[0] + alvo_tamanho, c] = (
                     alpha_s * alvo[:, :, c] + alpha_l * frame[alvo_posicao[1]:alvo_posicao[1] + alvo_tamanho, alvo_posicao[0]:alvo_posicao[0] + alvo_tamanho, c])
 
-            # Exibe a animação de estouro
-            if posicao_estouro is not None and (time.time() - tempo_estouro) < 0.5:
-                estouro = cv2.resize(imagem_estouro, (alvo_tamanho, alvo_tamanho))
-                alpha_s_estouro = estouro[:, :, 3] / 255.0
-                alpha_l_estouro = 1.0 - alpha_s_estouro
-                
-                for c in range(3):
-                    frame[posicao_estouro[1]:posicao_estouro[1] + alvo_tamanho, posicao_estouro[0]:posicao_estouro[0] + alvo_tamanho, c] = (
-                        alpha_s_estouro * estouro[:, :, c] + alpha_l_estouro * frame[posicao_estouro[1]:posicao_estouro[1] + alvo_tamanho, posicao_estouro[0]:posicao_estouro[0] + alvo_tamanho, c])
+            # Exibe a animação de estouro com fade out
+            if posicao_estouro is not None:
+                elapsed_time = time.time() - tempo_estouro
+                if elapsed_time < fade_out_duracao:
+                    fade_factor = 1 - (elapsed_time / fade_out_duracao)  # Gradualmente reduz a opacidade
+                    estouro = cv2.resize(imagem_estouro, (alvo_tamanho, alvo_tamanho))
+                    alpha_s_estouro = (estouro[:, :, 3] / 255.0) * fade_factor
+                    alpha_l_estouro = 1.0 - alpha_s_estouro
+
+                    for c in range(3):
+                        frame[posicao_estouro[1]:posicao_estouro[1] + alvo_tamanho, posicao_estouro[0]:posicao_estouro[0] + alvo_tamanho, c] = (
+                            alpha_s_estouro * estouro[:, :, c] + alpha_l_estouro * frame[posicao_estouro[1]:posicao_estouro[1] + alvo_tamanho, posicao_estouro[0]:posicao_estouro[0] + alvo_tamanho, c])
+                else:
+                    posicao_estouro = None  # Remove a explosão após o fade out
 
             # Exibe o score e o tempo restante
             cv2.putText(frame, f"Score: {score}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
