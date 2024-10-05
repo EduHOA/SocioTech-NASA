@@ -96,6 +96,51 @@ body {
     font-size: 1.2em;
 }
 
+
+.treino {
+    display: flex;
+    padding: 178px;
+    gap: 30px;
+}
+
+.treino-item {
+    background-color: #100C39;
+    color: #FFFFFF;
+    border-radius: 10px;
+    width: 300px;
+    height: 230px;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.treino-item1 {
+    background-color: #100C39;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: 3px #00B630 solid;
+    width: 300px;
+    height: 230px;
+    padding: 1px;
+    transition: transform 0.3s ease;
+}
+
+.treino-item:hover, .treino-item1:hover {
+    transform: scale(1.1);
+}
+
+.treino-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.treino-item h3, .treino-item1 h3 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
