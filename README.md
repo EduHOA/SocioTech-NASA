@@ -33,21 +33,30 @@ Um jogo inovador projetado para astronautas que vivem a experiência única da m
 Neste jogo, o astronauta terá a oportunidade de aprimorar sua saúde física e mental, competindo com seus colegas astronautas em um ambiente virtual. 
 À medida que você completa cada movimento corretamente, sua pontuação aumenta, incentivando uma experiência de aprendizado e adaptação contínua.
 
-# Grupo
-nome: Eduardo Aguiar
-nome: Matheus Inacio
-nome: Isaac Arantes
-nome: Nathan Schiavon 
-nome: Matheus Souza
-nome: Enzo dos Santos
+## Equipe
 
-https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/
+- **Eduardo Aguiar**
+- **Matheus Inacio**
+- **Isaac Arantes**
+- **Nathan Schiavon**
+- **Matheus Souza**
+- **Enzo dos Santos**
 
-# Para Execução
+[Link do projeto no Space Apps Challenge 2024](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/)
 
+## Para Execução
+Para executar o projeto, siga os passos abaixo:
+
+Instalação das Dependências: Certifique-se de ter o Python e o gerenciador de pacotes pip instalados. Em seguida, instale as bibliotecas necessárias executando os seguintes comandos no seu terminal:
+Siga os passos abaixo para rodar o projeto:
+
+### 1. Instalação das Dependências
+
+Certifique-se de ter o Python e o gerenciador de pacotes `pip` instalados. Em seguida, instale as bibliotecas necessárias executando os seguintes comandos no terminal:
+
+```bash
 pip install flask
 pip install numpy
 pip install opencv-python
-run app.py
-run index.html
-rn
+```
+Após iniciar o servidor, abra o arquivo index.html no seu navegador para acessar a interface do jogo. Você pode arrastar o arquivo para uma janela do navegador ou usar um servidor local (como o Live Server do Visual Studio Code).
