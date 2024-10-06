@@ -48,3 +48,6 @@ https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/
 pip install flask
 pip install numpy
 pip install opencv-python
+run app.py
+run index.html
+rn
