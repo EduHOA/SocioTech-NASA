@@ -38,7 +38,7 @@ caminho_imagem_balao = './img/balao.png'
 caminho_imagem_estouro = './img/estouro.png'
 
 def gen_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(1)
     alvo_tamanho = 80
 
     # Intervalos de cor para detecção
@@ -127,8 +127,8 @@ def gen_frames():
                     posicao_estouro = None  # Remove a explosão após o fade out
 
             # Exibe o score e o tempo restante
-            cv2.putText(frame, f"Score: {score}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
-            cv2.putText(frame, f"Time: {int(tempo_restante)}s", (frame_width - 200, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.putText(frame, f"Score: {score}", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+            cv2.putText(frame, f"Tempo: {int(tempo_restante)}s", (frame_width - 200, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
 
             # Codifica o frame para a resposta do Flask
             ret, buffer = cv2.imencode('.jpg', frame)
