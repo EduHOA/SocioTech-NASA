@@ -33,6 +33,8 @@ Um jogo inovador projetado para astronautas que vivem a experiência única da m
 Neste jogo, o astronauta terá a oportunidade de aprimorar sua saúde física e mental, competindo com seus colegas astronautas em um ambiente virtual. 
 À medida que você completa cada movimento corretamente, sua pontuação aumenta, incentivando uma experiência de aprendizado e adaptação contínua.
 
+[Link do projeto no Space Apps Challenge 2024](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/)
+
 ## Equipe
 
 - **Eduardo Aguiar**
@@ -42,7 +44,6 @@ Neste jogo, o astronauta terá a oportunidade de aprimorar sua saúde física e 
 - **Matheus Souza**
 - **Enzo dos Santos**
 
-[Link do projeto no Space Apps Challenge 2024](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/)
 [Link da apresentação no Canva](https://www.canva.com/design/DAGS0Eiyxvw/3vudmxTZ4cTQd4CaaTCSbw/edit?amp%3Butm_campaign=designshare&amp%3Butm_medium=link2&amp%3Butm_source=sharebutton)
 
 ## Para Execução
