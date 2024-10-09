@@ -43,7 +43,6 @@ Neste jogo, o astronauta terá a oportunidade de aprimorar sua saúde física e 
 - **Enzo dos Santos**
 
 [Link do projeto no Space Apps Challenge 2024](https://www.spaceappschallenge.org/nasa-space-apps-2024/find-a-team/socio-tech/)
-
 [Link da apresentação no Canva](https://www.canva.com/design/DAGS0Eiyxvw/3vudmxTZ4cTQd4CaaTCSbw/edit?amp%3Butm_campaign=designshare&amp%3Butm_medium=link2&amp%3Butm_source=sharebutton)
 
 ## Para Execução
